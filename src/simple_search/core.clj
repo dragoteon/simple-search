@@ -142,7 +142,7 @@
     (iterate (next-generations generation generation-size) max-generations  )
     final-gen)
 
-(reverse (sort-by penalized-score (evolution generation-one 40 1000)))
+(map penalized-score (reverse (sort-by penalized-score (evolution generation-one 40 100))))
 
 ;(defn evolution
 ;  [generation generation-size max-generations]
